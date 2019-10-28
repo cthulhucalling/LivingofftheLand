@@ -3,3 +3,6 @@ Ping scanner - one liner
 
 Portscanner - one liner (slooooooow)
 1..1024 | % {echo ((new-object Net.Sockets.TcpClient).Connect("xxx.xxx.xxx.xxx",$_)) "Port $_ is open!"} 2>$null
+
+DNS scan
+ 1..254|% {echo "xxx.xxx.xxx.$_ - "([Net.Dns]::GetHostEntry("xxx.xxx.xxx.$_").HostName)} 2>$null
