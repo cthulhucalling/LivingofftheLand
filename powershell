@@ -1,0 +1,5 @@
+Ping scanner - one liner
+1..254 | % {"xxx.xxx.xxx.$($_): $(Test-Connection -count 1 -comp xxx.xxx.xxx.$($_) -quiet)"}
+
+Portscanner - one liner (slooooooow)
+1..1024 | % {echo ((new-object Net.Sockets.TcpClient).Connect("xxx.xxx.xxx.xxx",$_)) "Port $_ is open!"} 2>$null
