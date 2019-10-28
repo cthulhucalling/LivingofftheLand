@@ -1,0 +1,2 @@
+Look for "password" in files (recusrive, case insensitive)
+findstr /si "password" *.txt (look for *.txt, *.xml, *.ini and others)
