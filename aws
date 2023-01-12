@@ -1,0 +1,20 @@
+#Get session role name
+curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
+(something something something)
+#Get session credentials
+curl http://169.254.169.254/latest/meta-data/iam/security-credentials/(something something something)
+
+{
+  "Code" : "Success",
+  "LastUpdated" : "2023-01-12T06:12:21Z",
+  "Type" : "AWS-HMAC",
+  "AccessKeyId" : "<key id>",
+  "SecretAccessKey" : "<access key>",
+  "Token" : "<access token>",
+  "Expiration" : "2023-01-12T12:47:54Z"
+}
+
+
+export AWS_ACCESS_KEY_ID=<accesskeyid>
+export AWS_SECRET_ACCESS_KEY=<secretAccessKey>
+export AWS_SESSION_TOKEN=<token>
